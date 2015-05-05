@@ -14,13 +14,21 @@ namespace Arraygroessen
             int[] Zahl = new int[Arraygroesse];
             int index = 0;
             int Variable = 1;
-            while (index <= Arraygroesse - 1)
+            while (index < Arraygroesse)
             {
                 Console.Write("Variable ");
                 Console.Write(Variable);
-                Console.Write(" :");
+                Console.Write(": ");
                 Zahl[index] = Convert.ToInt32(Console.ReadLine());
                 index = index + 1;
                 Variable = Variable + 1;
             }
-            
+            for (index = 0; index < Arraygroesse; index++)
+            {
+                Console.Write("Ausgabe Zahl " + (index + 1) + ": ");
+                Console.WriteLine(Zahl[index]);
+                Console.ReadKey();
+            }
+        }
+    }
+}
