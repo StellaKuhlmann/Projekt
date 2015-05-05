@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Arraygroessen
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Arraygröße: ");
+            int Arraygroesse = Convert.ToInt32(Console.ReadLine());
+            int[] Zahl = new int[Arraygroesse];
+            int index = 0;
+            int Variable = 1;
+            while (index <= Arraygroesse - 1)
+            {
+                Console.Write("Variable ");
+                Console.Write(Variable);
+                Console.Write(" :");
+                Zahl[index] = Convert.ToInt32(Console.ReadLine());
+                index = index + 1;
+                Variable = Variable + 1;
+            }
+            
