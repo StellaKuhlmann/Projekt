@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Wert a: ");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Wert b: ");
+            double b = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Wert c: ");
+            double c = Convert.ToDouble(Console.ReadLine());
+            string Funktion = "f(x) = ";
+            if (a != 0.0)
+            {
+                if (a != 1 && a != -1)
+                {
+                    Funktion = Funktion + a;
+                }
+                if (a == -1)
+                {
+                    Funktion = Funktion + "-";
+                }
+                Funktion = Funktion + "x²";
+            }
+            if (b != 0.0)
+            {
+                if (b != 1 && b != -1)
+                {
+                    if (b != 1 && b > 0)
+                    {
+                        Funktion = Funktion + "+" + b;
+                    }
+                    if (b != -1 && b < 0)
+                    {
+                        Funktion = Funktion + b;
+                    }
+                }
+                if (b == -1)
+                {
+                    Funktion = Funktion + "-";
+                }
+                if (b == 1)
+                {
+                    Funktion = Funktion + "+";
+                }
+                Funktion = Funktion + "x";
+            }
+                if (c>0)
+                {
+                    Funktion = Funktion + "+" + c;
+                }
+                if (c < 0)
+                {
+                    Funktion = Funktion + c;
+                }
+                if (Funktion == "f(x) = ")
+                {
+                    Funktion = "f(x) = 0";
+                }
+            Console.Write(Funktion);
+            Console.ReadKey();
+        }
+    }
+}
