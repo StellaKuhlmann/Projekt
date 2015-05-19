@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Mittelwert
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Anzahl der Werte: ");
+            int Anzahl = Convert.ToInt32(Console.ReadLine());
+            double[] Zahlen = new double[Anzahl];
+            int index = 0;
+            int Variable = 1;
+            while(index < Anzahl)
+            {
+                Console.Write("Zahl ");
+                Console.Write(Variable);
+                Console.Write(": ");
+                Zahlen[index] = Convert.ToDouble(Console.ReadLine());
+                index = index + 1;
+                Variable = Variable + 1;
+            }
+            double Summe = 0;
+            for (index = 0; index < Anzahl; index++)
+            {
+                Summe = Summe + Zahlen[index];
+            }
+            Console.Write("Mittelwert: ");
+            Console.WriteLine(Summe / Anzahl);
+            double Varianz = 0;
+            for (index = 0; index < Anzahl; index++)
+            {
+                Varianz = Varianz + ((Zahlen[index] - (Summe/Anzahl)) * (Zahlen[index] - (Summe/Anzahl)));
+            }
+            double StdAbw;
+            Console.Write("Standardabweichung: ");
+            StdAbw = Math.Sqrt(Varianz / Anzahl);
+            Console.WriteLine(StdAbw);
+            Console.ReadKey();
+        }
+    }
+}
