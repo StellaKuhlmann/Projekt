@@ -39,7 +39,9 @@ namespace Mittelwert
             Console.Write("Standardabweichung: ");
             StdAbw = Math.Sqrt(Varianz / Anzahl);
             Console.WriteLine(StdAbw);
+            Console.WriteLine("Hallo Leute!")
             Console.ReadKey();
+           
         }
     }
 }
